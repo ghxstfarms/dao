@@ -13,6 +13,19 @@ local statsPlayerFarmSa
 
 print('nuevo script BY HEISENBERG, si usas mi script sabes que soy la verga');
 
+_G.block = true
+
+spawn(function ()
+	while _G.block == true do
+		local args = {
+		[1] = true
+		}
+
+		game:GetService("ReplicatedStorage").Package.Events.block:InvokeServer(unpack(args))
+		wait()
+	end
+end)
+
 local millon = 1000000
 local arregloAtaques = {
 	{name = "God Slicer",requerido = millon * 60},
